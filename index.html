@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>不规则图片等比排列</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,minimal-ui" name="viewport">
+<style>
+*{margin:0;padding:0;}
+img{border:0;}
+.wrapper{
+    margin: .1rem;
+    box-sizing:border-box;
+
+}
+.item{
+    background-color: #ccc;
+    margin:.1rem;
+    float:left;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-color: #ccc;
+    position: relative;
+
+}
+.item-img{
+   /* display: block;*/
+    opacity: 0;
+    /*-webkit-transform:scale(0);*/
+    -webkit-transition:.3s;
+    box-shadow:0 0 30px rgba(255,255,255,.5);
+    position: absolute;
+    left:0;
+    top:0;
+}
+@-webkit-keyframes ops{
+    0%{
+        opacity: 1,
+        -webkit-transform:scale(0);
+    },
+    100%{
+        opacity:1;
+        -webkit-transform:scale(1);
+    }
+}
+</style>
+<script src="http://js.app.meitudata.com/meitushop/mobile/lib/refreshRem.js"></script>
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+    </div>
+    <script src="http://js.app.meitudata.com/meitushop/lib/zepto.min.js"></script>
+    <script src="horizontalWaterfall.js"></script>
+    <script>
+    var data = [
+        {
+            "url": "http://mshopimg4.meitudata.com/56eb99a296b0957080.jpg",
+            "w": 1920,
+            "h": 480
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_a3fc4c9adb1833ee8f253545969f30366421f62d7080cdee75688f6d51e9817b.jpeg!thumb720",
+            "w": 4032,
+            "h": 3024
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_04257bb71f8bd3782cc331012b71a99a6271af2a5cef1642ccc320b8f7310b39.jpeg!thumb720",
+            "w": 960,
+            "h": 1280
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_2add8681957bdf129952049d2c6d729f6f384f8e35c688d3015eeef88233af0b.png!thumb720",
+            "w": 1125,
+            "h": 1500
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_158eb02fd00dbb084b0d0b31d42513cd214f05f43d7f658bc91ae3582da1f011.png!thumb720",
+            "w": 1125,
+            "h": 1500
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_1733d230a946316d58c79f4e52f2e679d2471291621877bbd991a532872cd919.png!thumb720",
+            "w": 1125,
+            "h": 1500
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_43083b2b4a79a1fa0da12cae2e4546aeb04f00fb5b547fc10e9f0b60a8d5fc88.jpeg!thumb720",
+            "w": 4032,
+            "h": 3024
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_66807e4209030d139dca1db1adc28e60fdc572dc4bfa6d1789e06c7003047551.jpeg!thumb720",
+            "w": 3024,
+            "h": 4032
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_8705b645b46916be91eb30523c4aa5b88deb9352d0db0ccc188ea48d7371c5a8.jpeg!thumb720",
+            "w": 3024,
+            "h": 4032
+        },
+        {
+            "url": "http://mshopimg4.meitudata.com/56eb99a296b0957080.jpg",
+            "w": 1920,
+            "h": 480
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_b6d73b05af00be919fac19d8ce5f145abbd9ad72c2b0116790ad259c87585449.jpeg!thumb720",
+            "w": 3024,
+            "h": 4032
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_183d2fd283b37f45416b1faea8a4fbc7e127baf02dc76d25889e562b98bf5f37.jpeg!thumb720",
+            "w": 3024,
+            "h": 4032
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_2594b9bc919c81c43930507e4393891bf35ec0514da14c0e272581a04736b676.jpeg!thumb720",
+            "w": 1000,
+            "h": 1000
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_8fd9efb42563d1c10ab81e8df10846ad2b3daaaa3c59566e82fa6d2d1152223e.jpeg!thumb720",
+            "w": 3024,
+            "h": 4032
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_0d89c603ee49606006f9f62dab49c5aa020b1925e8630a61aa3e1542589896c6.jpeg!thumb720",
+            "w": 3024,
+            "h": 3024
+        },
+        {
+            "url": "http://album1.meitudata.com/mm_0d89c603ee49606006f9f62dab49c5aa020b1925e8630a61aa3e1542589896c6.jpeg!thumb720",
+            "w": 3024,
+            "h": 3024
+        }
+    ];
+
+    horizontalWaterfall('#wrapper',{
+        data:data
+    })
+    </script>
+</body>
+</html>

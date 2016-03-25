@@ -1,0 +1,24 @@
+{
+  "name": "image-horizontal-waterfall",
+  "version": "1.0.0",
+  "description": "waterfall image horizontal",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "图片瀑布流",
+    "图片不规则排列",
+    "图片水平方向瀑布流",
+    "waterfall",
+    "image",
+    "horizontal",
+    "js",
+    "zepto"
+  ],
+  "author": "ZHY",
+  "license": "ISC"
+}
