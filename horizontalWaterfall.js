@@ -1,5 +1,5 @@
 /* 
-    horizontalhorizontalWaterfall.js
+    horizontalWaterfall.js
     图片横向瀑布流,基于zepto
     @params (id,ops)
     @容器 #wrap 

@@ -1,4 +1,4 @@
-# horizontalhorizontalWaterfall
+# horizontalWaterfall
 
 #### 功能更新日志
 * 类似于水平方向的图片瀑布流，基于zepto
