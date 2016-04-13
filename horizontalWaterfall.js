@@ -20,7 +20,6 @@
     }
     function horizontalWaterfallCreator(ops){}
 
-    var winW  = $(window).width()
     //默认参数
     horizontalWaterfallCreator.defaults = {
         defaultH: 130, //预期高度，这个值决定了一行最多可以排几个
@@ -35,7 +34,7 @@
             this.$wrap      = $(wrap);
             this.winW       = $(window).width();
             this.totalW     = this.$wrap.width();
-            this.winRatio   = winW/320;
+            this.winRatio   = this.winW/320;
             this.margin     = Math.ceil(this.winRatio*DEF.columnMargin);//等比放大距离
             
             var rows = this.createRows(DEF.data);
